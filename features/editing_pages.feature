@@ -9,7 +9,7 @@ Feature: Editing Pages in a Lesson
   Scenario: Editing page 2 of 3
     Given I have created a lesson with a few pages
     And I navigate to the page 2 edit
-    And I fill in "title" with "New Title"
+    And I fill in "page_title" with "New Title"
     And I press "Save and exit to lesson"
     Then I should see "New Title"
     And I should not see "Test Page 2"
@@ -17,7 +17,7 @@ Feature: Editing Pages in a Lesson
   Scenario: Cancelling out of an edit
     Given I have created a lesson with a few pages
     And I navigate to the page 2 edit
-    And I fill in "title" with "New Title"
+    And I fill in "page_title" with "New Title"
     And I press "Cancel"
     Then I should not see "New Title"
     And I should see "Test Page 2" 

@@ -23,28 +23,28 @@ end
 Given /^I am logged in as an instructional designer$/ do
   Given "an instructional designer exists"
   visit('/login')
-  fill_in("user_session_email", :with => "id@example.com")
-  fill_in("user_session_password", :with => "password")
-  click_button('Login')
-  assert page.has_content?("Welcome, ")
+  fill_in("user_email", :with => "id@example.com")
+  fill_in("user_password", :with => "password")
+  click_button('Sign in')
+  assert page.has_content?("Signed in successfully")
 end
 
 Given /^I am logged in as a learner$/ do
   Given "a learner exists"
   visit('/login')
-  fill_in("user_session_email", :with => "learner@example.com")
-  fill_in("user_session_password", :with => "password")
-  click_button('Login')
-  assert page.has_content?("Welcome, ")
+  fill_in("user_email", :with => "learner@example.com")
+  fill_in("user_password", :with => "password")
+  click_button('Sign in')
+  assert page.has_content?("Signed in successfully")
 end
 
 Given /^I (am logged in|log in) as a manager$/ do |how_logged_am_i|
   Given "a manager exists"
   visit('/login')
-  fill_in("user_session_email", :with => "manager@example.com")
-  fill_in("user_session_password", :with => "password")
-  click_button('Login')
-  assert page.has_content?("Welcome, ")
+  fill_in("user_email", :with => "manager@example.com")
+  fill_in("user_password", :with => "password")
+  click_button('Sign in')
+  assert page.has_content?("Signed in successfully")
 end
 
 Given /^I am not logged in$/ do 

@@ -6,7 +6,6 @@ Factory.define :user do |o|
   o.password "password"
   o.password_confirmation "password"
   o.sequence(:email) {|n| "person#{n}@example.com" }
-  o.sequence(:single_access_token) {|n| "k3cFzLIQnZ4MHRmJvJz#{n}" }
   o.association :organization, :factory => :organization
 end
 

@@ -19,11 +19,11 @@ Feature: Managing Exams
     When I go to the exams page
     And I follow "New exam"
     Then I should see "New exam"
-    And I should see "Name"
+    And I should see "exam_name"
   
   Scenario: Adding a new exam
     When I go to the new exam page
-    And I fill in "name" with "New exam name"
+    And I fill in "exam_name" with "New exam name"
     And I press "Save and exit to exams index"
     Then I should see "Exams:"
     And I should see "New exam name"
@@ -33,7 +33,7 @@ Feature: Managing Exams
     When I go to the exams page
     And I follow "This old exam"
     And I follow "edit"
-    And I fill in "name" with "New hotness"
+    And I fill in "exam_name" with "New hotness"
     And I press "Save and exit to exams index"
     Then I should see "Exams:"
     And I should see "New hotness"

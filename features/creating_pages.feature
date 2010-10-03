@@ -9,15 +9,15 @@ Feature: Creating Pages in a Lesson
   Scenario: Adding initial page content
     Given I have created a lesson
     And I follow "Add a new page"
-    When I fill in "content" with "h1. This is my first page!"
-    And I fill in "title" with "My best page"
+    When I fill in "page_content" with "h1. This is my first page!"
+    And I fill in "page_title" with "My best page"
     And I press "Save and preview this page"
     Then I should see "This is my first page!"
     
   Scenario: Unsuccessfully attempting to add a page
     Given I have created a lesson
     And I follow "Add a new page"
-    When I fill in "content" with "h1. This is my first page!"
+    When I fill in "page_content" with "h1. This is my first page!"
     And I press "Save and preview this page"
     Then I should see "Title can't be blank"
   
@@ -25,8 +25,8 @@ Feature: Creating Pages in a Lesson
   Scenario: Exiting to lesson
     Given I have created a lesson
     And I follow "Add a new page"
-    And I fill in "title" with "Another great page"
-    And I fill in "content" with "h1. This is my first page!"
+    And I fill in "page_title" with "Another great page"
+    And I fill in "page_content" with "h1. This is my first page!"
     When I press "Save and exit to lesson" 
     Then I should see "Page was successfully created"
     And I should see "Lesson: "
@@ -34,8 +34,8 @@ Feature: Creating Pages in a Lesson
   Scenario: Creating an additional page
     Given I have created a lesson
     And I follow "Add a new page"
-    And I fill in "title" with "Another great page"
-    And I fill in "content" with "h1. This is my first page!"
+    And I fill in "page_title" with "Another great page"
+    And I fill in "page_content" with "h1. This is my first page!"
     When I press "Save and add another page"
     Then I should not see "h1. This is my first page!"
     And I should not see "There was an error"

@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
     self.password = temporary_password
     self.password_confirmation = temporary_password
     if self.save
-      UserMailer.deliver_welcome_email(self, temporary_password)
+      UserMailer.welcome_email(self, temporary_password).deliver
     end
   end
   
@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
     raise ArgumentError unless lesson.is_a? Lesson
     return false if self.is_assigned?(lesson)
     self.assigned_lessons << lesson
-    UserMailer.deliver_lesson_assigned_email(self, lesson)
+    UserMailer.lesson_assigned_email(self, lesson).deliver
   end
   
   def complete(lesson)

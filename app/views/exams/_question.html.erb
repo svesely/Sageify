@@ -2,7 +2,7 @@
   <h3><%= question.text %></h3>
   <ul>
     <%- question.choices.sort.each do |choice| -%>
-      <%= correct_or_not_li(choice) %>
+      <%= correct_or_not_li(choice).html_safe %>
     <%- end -%>
   </ul>
 </li>

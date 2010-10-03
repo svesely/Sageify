@@ -12,20 +12,20 @@ Feature: Organizations
   Scenario: Adding a new organization
     Given I am not logged in
     And I go to the signup page
-    When I fill in "signup_presenter_organization_name" with "Vesopolis"
-    And  I fill in "signup_presenter_user_first_name" with "Scott"
-    And  I fill in "signup_presenter_user_last_name" with "Vesely"
-    And  I fill in "signup_presenter_user_email" with "blah@example.com"
-    And  I fill in "signup_presenter_user_password" with "password"
-    And  I fill in "signup_presenter_user_password_confirmation" with "password"
+    When I fill in "organization_name" with "Vesopolis"
+    And  I fill in "user_first_name" with "Scott"
+    And  I fill in "user_last_name" with "Vesely"
+    And  I fill in "user_email" with "blah@example.com"
+    And  I fill in "user_password" with "password"
+    And  I fill in "user_password_confirmation" with "password"
     And  I press "Submit"
     Then I should see "Your organization has been added!"
     
   Scenario: Not enough info
     Given I am not logged in
     And I go to the signup page
-    When I fill in "signup_presenter_organization_name" with "Vesopolis"
-    And  I fill in "signup_presenter_user_password_confirmation" with "password"
+    When I fill in "organization_name" with "Vesopolis"
+    And  I fill in "user_password_confirmation" with "password"
     And  I press "Submit"
     Then I should not see "Your organization has been added!"
     And I should see "Email is too short"

@@ -19,8 +19,8 @@ Feature: Creating Web Based Training Lessons
     
   Scenario: Creating a new lesson successfully
     When I go to the new lesson page
-    And I fill in "name" with "Test Lesson 1"
-    And I fill in "description" with "This is an example description"
+    And I fill in "lesson_name" with "Test Lesson 1"
+    And I fill in "lesson_description" with "This is an example description"
     And I press "Create"
     Then I should see "Test Lesson 1"
     And I should see "This is an example description"
@@ -28,14 +28,14 @@ Feature: Creating Web Based Training Lessons
   Scenario: Creating a lesson unsuccessfully
     Given I go to the new lesson page
     When I go to the new lesson page
-    And I fill in "description" with "This is an example description"
+    And I fill in "lesson_description" with "This is an example description"
     And I press "Create"
     Then I should see "Name can't be blank"
 
   Scenario: Viewing lessons by title
     When I go to the new lesson page
-    And I fill in "name" with "Test Lesson 1"
-    And I fill in "description" with "This is an example description"
+    And I fill in "lesson_name" with "Test Lesson 1"
+    And I fill in "lesson_description" with "This is an example description"
     And I press "Create"
     And I go to the lessons page
     Then I should see "Test Lesson 1"

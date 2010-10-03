@@ -8,7 +8,7 @@
     Answers:
   </p>
   <ul>
-    <% f.fields_for :choices do |choice_form| %>
+    <%= f.fields_for :choices do |choice_form| %>
       <li>
         <%= choice_form.hidden_field :letter %>
         <%= f.radio_button :correct_choice_letter, choice_form.object.letter %>
@@ -22,4 +22,4 @@
   <p><input type="submit" name="save_and_new" value="Save and add another question" id="save_and_new"></p>
   <p><input type="submit" name="cancel" value="Cancel" id="cancel"></p>
 
-<% end %>
+<% end -%>

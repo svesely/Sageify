@@ -4,7 +4,7 @@
   <%= safe_textile(@page.content) %>
 </div>
 <div id="page_controls">
-  <%= page_controls_for_page(@page) %>
+  <%= page_controls_for_page(@page).html_safe %>
 </div>
 
-<%= exam_link_list(@page) %>
+<%= exam_link_list(@page).html_safe %>

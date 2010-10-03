@@ -1,6 +1,6 @@
 Given /^I have created a lesson$/ do
   Given "I go to the new lesson page"
-  fill_in("name", :with => "Test Lesson 1")
+  fill_in("lesson_name", :with => "Test Lesson 1")
   click_button('Create')
 end
 

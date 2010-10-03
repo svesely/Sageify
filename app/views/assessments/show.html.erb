@@ -4,6 +4,6 @@
   <ol>
     <%= render :partial => 'question', :collection => @exam.questions, :locals => {:f => f }%>
   </ol>
-  <%= f._field :exam_id %>
+  <%= f.hidden_field :exam_id %>
   <%= f.submit "Submit", :disable_with => 'Submiting...' %>
 <% end -%>
