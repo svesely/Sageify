@@ -1,0 +1,193 @@
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*GENERAL*/
+body {
+	line-height: 1;
+	background:url(/images/top-gradient.gif) repeat-x top left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#body-inner{
+	width:900px;
+	margin:0 auto;	
+}
+h1{
+	font-size:26px;
+	padding: 0 0 15px 0;
+}
+h2{
+	font-size:26px;
+	padding: 0 0 15px 0;
+}
+h3{
+	font-sie:20px
+	padding:0 0 10px 0;
+}
+p{
+	font-size:16px;
+	line-height:24px;
+}
+/*HEADER*/
+#header{
+	height:85px;
+}
+#header #logo{
+	margin:15px 0 0 20px;
+	float:left;
+}
+#header #header-menu{
+ 	float:right;
+	
+}
+#header #header-menu ul{
+	margin-top:47px;
+	
+}
+#header #header-menu li{
+	display:inline;
+	padding:6px;
+	border-top:2px solid #edebeb;
+	border-right:2px solid #edebeb;
+	border-left:2px solid #edebeb;
+	background: #fff;
+	margin-left:5px;
+
+}
+#header #header-menu li a{
+	color:#8fc742;
+	font-size:14px;
+	font-weight:bold;
+	line-height:22px;
+	padding:6px 3px 7px;
+	cursor:pointer;
+	text-decoration:none;
+}
+#header #header-menu li a:hover{
+	text-decoration:underline;
+}
+#header #header-menu li:hover,
+#header #header-menu li.current link a{
+    background-color: #f6feff;
+    border-bottom: 2px solid #fff;
+}
+
+/*CONTENT*/
+#container{
+	background:url(/images/body-bottom.gif) bottom left no-repeat;
+	min-height:462px;
+	margin: 10px 0 0 0;
+	
+}
+#container-inner{
+	background:url(/images/body-top.gif) top left no-repeat;
+	min-height:300px;
+	padding: 30px;
+}
+#container-inner li{
+	font-size:16px;
+	line-height:24px;
+	padding-left:20px;
+}
+/*BUTTONS*/
+.get-started{
+     position:absolute;
+     top:450px;
+     margin-left:320px;
+}
+/*FORM ELEMENTS*/
+
+form {
+  padding: 10;
+  margin: 10;
+  background-color: #FFF;
+}
+
+/* If you're finding the input elements get pushed down, increase the width */
+label {
+  float: left;
+  width: 25%;
+  vertical-align: top;
+}
+
+input,
+textarea,
+select {
+  padding: 1px;
+  font: 400 1em verdana, sans-serif;
+  color: #333;
+  background: #EEE;
+  border: 1px solid #CCC;
+    margin:5px 0;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+select:focus,
+select:hover {
+  color: #000;
+  background: #E7F1F3;
+  border: 1px solid #888;
+}
+
+input.noBorder,
+input:focus.noBorder,
+input:hover.noBorder {
+  padding: 0;
+  border: 0;
+}
+
+input.button {
+  padding: 2px 5px;
+
+  font: 400 0.9em verdana, serif;
+  cursor: pointer;
+
+  color: #fff;
+  background: #FC3307;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FF7800 #691300 #691300 #FF7800;
+}
+
+input.radio {
+  background: none;
+  border: 0px;
+}
+
+dt {
+  font: 125% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
+dd {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+
+
+

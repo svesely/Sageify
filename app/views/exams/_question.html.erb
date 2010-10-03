@@ -1,0 +1,8 @@
+<li>
+  <h3><%= question.text %></h3>
+  <ul>
+    <%- question.choices.sort.each do |choice| -%>
+      <%= correct_or_not_li(choice) %>
+    <%- end -%>
+  </ul>
+</li>

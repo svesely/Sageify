@@ -1,0 +1,25 @@
+<%= form_for([@exam, @question]) do |f| %>
+  <%= f.error_messages %>
+  
+  <%= f.label :text, "Question Text" %>
+  <%= f.text_field :text %>
+  
+  <p>
+    Answers:
+  </p>
+  <ul>
+    <% f.fields_for :choices do |choice_form| %>
+      <li>
+        <%= choice_form.hidden_field :letter %>
+        <%= f.radio_button :correct_choice_letter, choice_form.object.letter %>
+        <%= choice_form.object.letter %>.
+        <%= choice_form.text_field :text %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <p><input type="submit" name="save_and_done" value="Save and exit to exam" id="save_and_done"></p>
+  <p><input type="submit" name="save_and_new" value="Save and add another question" id="save_and_new"></p>
+  <p><input type="submit" name="cancel" value="Cancel" id="cancel"></p>
+
+<% end %>

@@ -1,0 +1,4 @@
+<li>
+  <%= exam.name %>
+  <%= button_to "Remove Exam from Lesson", {:action => :destroy, :lesson_id => @lesson.id, :id => exam.id}, :method => 'delete' %>
+</li>

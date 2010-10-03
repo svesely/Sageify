@@ -1,0 +1,8 @@
+<h1>Lesson: <%= h @lesson.name %></h1>
+<h2>Exams:</h2>
+
+<ul>
+  <%= render :partial => "exam", :collection => @lesson.exams %>
+</ul>
+<p><%= link_to "Attach another exam to this lesson", :action => :new %></p>
+<p><%= link_to "Back to lesson", lesson_path(@lesson) %></p>

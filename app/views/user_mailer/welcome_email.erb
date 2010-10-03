@@ -1,0 +1,16 @@
+Welcome to Sageify, <%= @user.first_name %>!
+
+<%= @user.organization.name %> has prepared a Sageify account for you.
+
+  Log in today to view training and learn more about your organization!
+
+  To log in to the site, just follow this link: <%= @url %>
+
+When prompted, enter your email address: <%= @user.email %>
+We've created a temporary password for you: <%= @password  %>
+(Be sure to change it once you log in)
+
+Have a great day!
+
+  Sincerely, 
+  The Sageify Team

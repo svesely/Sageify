@@ -1,0 +1,6 @@
+<% html_title("Organization Information") %>
+<h2>Organization: <%= @organization.name %></h2>
+
+<p><%= link_to "Users", users_url %>: <%= @organization.users.size %></p>
+<p><%= link_to "Lessons", lessons_url %>: <%= @organization.lessons.size %></p>
+<p><%= link_to "Exams", lessons_url %>: <%= @organization.exams.size %></p>

@@ -1,0 +1,12 @@
+<% html_title("Exams") %>
+<h1>Exams:</h1>
+
+<ul id="exams">
+  <% @exams.each do |exam| %>
+    <li>
+      <h3><%= link_to exam.name, exam %></h3>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New exam', new_exam_path %>

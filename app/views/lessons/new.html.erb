@@ -1,0 +1,28 @@
+<% html_title("New Lesson") %>
+<h1>New lesson</h1>
+
+<%= form_for(@lesson) do |f| %>
+  <fieldset>
+    <legend>New Lesson</legend>
+    <%= f.error_messages %>
+
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br />
+      <span class="example">Examples: New Hire Process, or End-Of-Month Tasks</span>
+    </p>
+    <p>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+      <br />
+      <span class="hint">What information does this lesson cover? Who might want to view it?</span>
+    </p>
+    <p>
+      <%= f.submit 'Create' %>
+    </p>
+    
+  </fieldset>
+<% end %>
+
+<%= link_to 'Back', lessons_path %>

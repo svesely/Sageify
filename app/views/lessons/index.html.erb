@@ -1,0 +1,17 @@
+<% html_title("Lessons") %>
+<h1>Lessons:</h1>
+
+<ul id="lessons">
+  <% @lessons.each do |lesson| %>
+    <li>
+      <h3><%= link_to lesson.name, lesson %></h3>
+      <span id="pagecount"><%= lesson.pages.size %> pages</span>
+    </li>
+  <% end %>
+</ul>
+
+<% if @lessons.blank? %>
+  <%= render :partial => 'no_lessons' %>
+<% end %>
+
+<%= link_to 'New lesson', new_lesson_path %>

@@ -1,0 +1,24 @@
+<% html_title("Lesson: #{h(@lesson.name)}") %>
+<h1>Lesson: <%= h @lesson.name %></h1>
+<h2><%= @lesson.description %></h2>
+
+
+
+<ol id="pages">
+  <%= sortable_list(@lesson.pages, :url => lesson_pages_url(@lesson)).html_safe {|p| p.title } %>
+</ol>
+
+<% if @lesson.pages.blank? %>
+  <%= render :partial => 'no_pages' %>
+<% elsif @lesson.assigned_users.blank? %>
+  <%= render :partial => 'no_users' %>
+<% elsif @lesson.exams.blank? %>
+  <%= render :partial => 'no_exams' %>
+<% end %>
+
+<p><%= link_to 'Add a new page', new_lesson_page_path(@lesson.id) %></p>
+<p><%= link_to 'Assign users', lesson_assigned_users_path(@lesson) %></p>
+<p><%= link_to 'Assign exams', lesson_lesson_exams_path(@lesson) %></p>
+<p><%= link_to 'See storyboard', lesson_pages_path(@lesson) %></p>
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

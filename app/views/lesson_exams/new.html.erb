@@ -1,0 +1,7 @@
+<h1>Attach an exam</h1>
+<h2>For lesson: <%= @lesson.name %></h2>
+
+<%= form_for "assignment", :url => {:controller=>"lesson_exams", :action=>"create"} do |f| %>
+  <%= f.select :exam_id, @exams.map{|exam| [ exam.name, exam.id ] } %>
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end -%>

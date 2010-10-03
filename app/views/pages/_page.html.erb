@@ -1,0 +1,9 @@
+<div class="storyboard_panel">
+  <div class="storyboard_page">
+    <h2><%= h page.title %></h2>
+    <div class="storyboard_panel_content">
+      <%= safe_textile(page.content) %>
+    </div>
+  </div>
+  <span class="view_edit_panel"><%= link_to "View", lesson_page_path(@lesson, page) %> | <%= link_to "Edit", edit_lesson_page_path(@lesson, page) %></span>
+</div>

@@ -1,0 +1,7 @@
+<% html_title("#{@lesson.name} Storyboard") %>
+<h1><%= "#{@lesson.name} Storyboard" %></h1>
+<p><%= link_to "Back to the lesson details", lesson_path(@lesson) %></p>
+<p><%= link_to "Add another page to this lesson", new_lesson_page_path(@lesson) %></p>
+<div class="storyboard">
+  <%= render :partial => 'page', :collection => @lesson.pages %>
+</div>

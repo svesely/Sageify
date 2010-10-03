@@ -1,0 +1,4 @@
+<li>
+  <%= assigned_user.display_name %>
+  <%= button_to "Delete assignment", {:action => :destroy, :lesson_id => @lesson.id, :id => assigned_user.id }, :method => 'delete' %>
+</li>

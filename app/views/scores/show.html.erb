@@ -1,0 +1,20 @@
+<h1>Assessment details:</h1>
+<h2>Performance on "<%= @score.exam.name %>" by <%= @score.learner.display_name %></h2>
+<p>Taken on: <%= @score.created_at %></p>
+<h3>Score: <%= "#{@score.score}% #{@score.pass_or_fail_note}" %></h3>
+
+<h3>Questions:</h3>
+<ol>
+  <% @score.question_and_answer_hash.each do |question, answer| %>
+    <li>
+      <%= question.text %>
+      <ul>
+        <% question.choices.sort.each do |choice| %>
+          <li>
+            <%= show_correct_selected_choice(choice, answer) %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ol>

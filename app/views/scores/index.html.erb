@@ -1,0 +1,10 @@
+<h1>Scores</h1>
+
+<h2>Last 20 Assessments</h2>
+<ul>
+  <% @scores.each do |assessment| %>
+    <li>
+      <%= assessment.learner.email %>: <%= link_to assessment.display, score_url(assessment) %>
+    </li>
+  <% end %>
+</ul>

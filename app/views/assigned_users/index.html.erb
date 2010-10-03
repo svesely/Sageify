@@ -1,0 +1,10 @@
+<h1>Lesson: <%= @lesson.name %></h1>
+<h2>Assigned users:</h2>
+<% if @lesson.assigned_users.blank? %>
+  <h3>There are no users assigned to view this lesson</h3>
+<% end %>
+<ul>
+  <%= render :partial => "assigned_user", :collection => @lesson.assigned_users %>
+</ul>
+<p><%= link_to 'Assign another user', new_lesson_assigned_user_path(@lesson) %></p>
+<p><%= link_to "Back to lesson", lesson_path(@lesson) %></p>

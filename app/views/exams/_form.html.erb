@@ -1,0 +1,10 @@
+<%= form_for(@exam) do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <p><input type="submit" name="save_and_add_questions" value="Save and start adding questions" id="save_and_add_questions"></p>
+  <p><input type="submit" name="save_and_done" value="Save and exit to exams index" id="save_and_done"></p>
+  <p><input type="submit" name="cancel" value="Cancel" id="cancel"></p>
+<% end -%>
+
+<%= link_to 'Back', exams_path %>

@@ -1,0 +1,27 @@
+<%= error_messages_for :page %>
+<%= form_for [@lesson, @page] do |f| %>
+  <fieldset id="new_page" >
+    <legend>New Page</legend>
+    
+    <p><%= f.label :title %><%= f.text_field :title %></p>
+    <p><%= f.label :content %><%= f.text_area :content %></p>
+
+    <div id="page_save_footer">
+      <div id="page_save_controls">
+        <p><input type="submit" name="save_and_preview" value="Save and preview this page" id="save_and_preview"></p>
+        <p><input type="submit" name="save_and_add_another" value="Save and add another page" id="save_and_add_another"></p>
+        <p><input type="submit" name="save_and_done" value="Save and exit to lesson" id="save_and_done"></p>
+        <p><input type="submit" name="cancel" value="Cancel" id="cancel"></p>
+      </div>
+      <div id="page_save_textile_info">
+        <p>You can use <a href="http://hobix.com/textile/" onclick="window.open(this.href);return false;">Textile</a>  formatting to make creating pages a breeze.</p>
+        <p>With Textile, "h1. Hello" becomes &lt;h1&gt;hello&lt;/h1&gt;</p>
+        <p>*Simple* markup becomes &lt;b&gt;Simple&lt;/b&gt; markup</p>
+        <p><a href="http://en.wikipedia.org/wiki/Textile_(markup_language)" onclick="window.open(this.href);return false;">Click here to learn more</a></p>
+      </div>
+    </div>
+    
+    
+    
+  </fieldset>
+<% end -%>

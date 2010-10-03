@@ -1,0 +1,356 @@
+
+/*SCOTT CSS*/
+/*#container {
+  background-color: #DFD;
+  width: 700px;
+  padding: 10px;
+  margin: 10px;
+  overflow: auto;
+  margin-left: 30px;
+}
+
+#navigation {
+  float: left;
+  width: 100px;
+  height: 100%;
+}
+
+#content {
+  float: left;
+  width: 550px;
+  background-color: #EEE;
+  padding: .5em;
+  
+}
+
+#getting_started {
+  border: 1px solid #52230C;
+  background-color: #FFE;
+  width: 95%;
+  padding: 10px;
+  margin: 5px;
+}
+
+span.welcome {
+  color: #F22;
+}
+
+ul.navigation li {
+  background-color: #DDD;
+  padding-left: 3px;
+  margin-bottom: 3px;
+}
+
+fieldset {
+  background-color: #FFF;
+}
+ */
+#page_save_controls {
+  width: 35%;
+  float: left;
+}
+
+#page_save_textile_info {
+  width: 55%;
+  float: right;
+  background-color: #FFE;
+  border: 1px solid #999;
+}
+
+#page_save_textile_info p{
+  margin: 2px;
+  padding: 3px;
+}
+
+#page_save_footer {
+  overflow: auto;
+}
+
+.sorting_controls {
+  overflow: auto;  
+  float: left;
+  width: 55px;
+}
+
+.sortable {
+  overflow: auto;
+
+}
+.button-to,
+.button-to div {
+  float: left;
+}
+
+.storyboard_panel {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  float: left;
+  border: 1px solid #999;
+}
+/*HTML CSS*/
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  /*font-family: verdana, arial, helvetica, sans-serif;  */
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/*a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+ */
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*SCAFFOLD CSS*/
+/**************************************************************
+   Visit FullAhead.org and studio7designs.com for more layouts and downloads for this template!
+ **************************************************************/
+
+/*********************************************************
+   HTML Elements
+ *********************************************************/
+
+/*html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: #A6B09D;
+  font: 400 0.7em verdana, arial, sans-serif;
+  line-height: 170%;
+  
+  color: #555;
+}
+
+
+/* Headers */
+/*
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+
+h1 {
+  padding-bottom: 0.2em;
+  font: 400 1.6em arial, sans-serif;
+  color: #52230C;
+  border-bottom: 12px solid #ddd;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #52230C;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #52230C;
+}
+
+h4 {
+  font-size: 0.85em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+
+/* Needed to horizontally pad in a coloured container */
+.horzPad h1,
+.horzPad h2,
+.horzPad h3,
+.horzPad h4,
+.horzPad h5,
+.horzPad p {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+/* Links */
+/*a {
+  text-decoration: none;
+  color: #3B5D77;
+}
+
+a:hover {
+  color: #668FA3;
+}
+
+a img {
+  border: 0;
+}
+
+a img.border {  
+  border: 1px solid #FC3307;
+}
+
+a:hover img.border {  
+  /* Fixes IE bug - IE doesn't correctly apply the style on a:hover so need to mask it */
+  /*border: 1px solid #668FA3 !important;
+  border: 1px solid #FC3307;
+} */
+
+
+
+/* Images */
+img.floatRight {
+  margin: 5px 0 10px 10px;
+}
+
+img.floatLeft {
+  margin: 5px 10px 10px 0;
+}
+
+
+
+/* Lists */
+ul.no_bullets {
+  list-style-type: none;
+  padding: 1px;
+  margin: 1px;
+}
+
+ol li {
+  font-weight: bold;
+  color: #668FA3;
+}
+
+ol li span {
+  font-weight: normal;
+  color: #444;
+}
+
+
+
+/* Blockquote */
+blockquote {
+  margin: 0;
+  padding: 0 20px;
+  background: #E7F1F3;
+  border-top: 1px solid #AAD3DB;
+  border-bottom: 1px solid #AAD3DB;
+}
+
+
+
+/**************************************************************
+   Form Elements
+ **************************************************************/
+
+form {
+  padding: 10;
+  margin: 10;
+  background-color: #FFF;
+}
+
+/* If you're finding the input elements get pushed down, increase the width */
+label {
+  float: left;
+  width: 25%;
+  vertical-align: top;
+}
+
+input,
+textarea,
+select {
+  padding: 1px;
+  font: 400 1em verdana, sans-serif;
+  color: #333;
+  background: #EEE;
+  border: 1px solid #CCC;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+select:focus,
+select:hover {
+  color: #000;
+  background: #E7F1F3;
+  border: 1px solid #888;
+}
+
+input.noBorder,
+input:focus.noBorder,
+input:hover.noBorder {
+  padding: 0;
+  border: 0;
+}
+
+input.button {
+  padding: 2px 5px;
+
+  font: 400 0.9em verdana, serif;
+  cursor: pointer;
+
+  color: #fff;
+  background: #FC3307;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FF7800 #691300 #691300 #FF7800;
+}
+
+input.radio {
+  background: none;
+  border: 0px;
+}
+
+dt {
+  font: 125% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
+dd {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+

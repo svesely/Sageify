@@ -1,0 +1,30 @@
+<%= error_messages_for :user %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name %><br />
+  <br />
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name %><br />
+  <br />
+  <%= f.label :email %><br />
+  <%= f.text_field :email %><br />
+  <br />
+  <% if @user == current_user %>
+    <%= f.label :password, f.object.new_record? ? nil : "Change password" %><br />
+    <%= f.password_field :password %><br />
+    <br />
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %><br />
+    <br />
+  <% end %>
+  <% if current_user.has_role? "Manager" %>
+    <%= label "instructional_designer", "Instructional Designer?" %><br />
+    <%= check_box_tag  "instructional_designer", "instructional_designer", f.object.has_role?("Instructional Designer") %><br />
+    
+    <%= label "manager", "Manager?" %><br />
+    <%= check_box_tag  "manager", "manager", f.object.has_role?("Manager") %><br />
+
+  <% end %>
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end -%>

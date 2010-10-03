@@ -1,0 +1,10 @@
+<h1>Assign a user</h1>
+<h2>For lesson: <%= @lesson.name %></h2>
+<div id="getting_started">
+  <p>When you assign a new lesson to a user, they will be notified by email!</p>
+
+</div>
+<%= form_for "assignment", :url => {:controller=>"assigned_users", :action=>"create"} do |f| %>
+  <%= f.select :user_id, @users.map{|p| [ p.display_name, p.id ] } %>
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end -%>

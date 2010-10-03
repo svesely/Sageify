@@ -1,0 +1,11 @@
+    <li>
+      <span style="question_text"><%= question.text %></span>
+      <ul>
+        <% question.choices.each do |choice| %>
+          <li>
+            <%= radio_button "questions", question.id, choice.letter %>
+            <%= choice.letter %>. <%= choice.text %>
+          </li>
+        <% end %>
+      </ul>
+    </li>

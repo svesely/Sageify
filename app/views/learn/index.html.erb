@@ -1,0 +1,8 @@
+<h1>Your Lessons:</h1>
+
+<h2>Available Lessons</h2>
+<ul class="lessons">
+  <% @lessons.each do |lesson| %>
+    <li class="lesson"><%= link_if_first_page_exists(lesson) %> <%= lesson_user_history(lesson, current_user) %></li>
+  <% end %>
+</ul>
