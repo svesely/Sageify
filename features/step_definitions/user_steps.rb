@@ -61,7 +61,7 @@ Given /^I am done viewing Assigned Lesson 1$/ do
   click_link("Assigned Lesson 1")
   click_link("Next")
   click_link("Next")
-  page.should_not have_content("Next")
+  assert !page.has_content?("Next")
 end
 
 
