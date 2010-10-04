@@ -6,7 +6,7 @@ Feature: Logging in and out
   Scenario: Not logged in
     Given I am not logged in
     When I go to the lessons page
-    Then I should see "You must be logged in to access this page"
+    Then I should see "You need to sign in or sign up before continuing"
  
   Scenario: logged in as a learner accessing lessons
     Given I am logged in as a learner
