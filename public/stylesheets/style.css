@@ -188,6 +188,8 @@ dd {
   padding-left: 10px;
 }
 
-
+.sorting_controls, .sorting_controls div, .sorting_controls form {
+  display: inline;
+}
 
 

@@ -5,7 +5,7 @@
 
 
 <ol id="pages">
-  <%= sortable_list(@lesson.pages, :url => lesson_pages_url(@lesson)).html_safe {|p| p.title } %>
+  <%= sortable_list(@lesson.pages, :url => lesson_pages_url(@lesson)).html_safe %>
 </ol>
 
 <% if @lesson.pages.blank? %>

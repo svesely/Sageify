@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   #TODO dry this mofo out.
   #TODO also, probably put some security around here. 
   def sort
-    @page = Page.find(params[:id])
+    @page = Page.find(params[:page_id])
     case params[:direction]
     when "up"
       @page.move_higher

@@ -11,7 +11,9 @@ Sageify::Application.routes.draw do
   
   resources :lessons do
     resources :assigned_users
-    resources :pages, :collection => {:sort => :post}
+    resources :pages do
+      post :sort, :on => :collection
+    end
     resources :lesson_exams
   end
   
