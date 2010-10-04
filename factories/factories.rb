@@ -3,6 +3,8 @@ Factory.define :organization do |o|
 end
 
 Factory.define :user do |o|
+  o.sequence(:first_name) {|n| "firsty#{n}"}
+  o.sequence(:last_name) {|n| "lasty#{n}"}
   o.password "password"
   o.password_confirmation "password"
   o.sequence(:email) {|n| "person#{n}@example.com" }

@@ -17,4 +17,6 @@ group :development, :test do
   gem 'cucumber-rails'
   gem "factory_girl"
   gem 'capybara'
+  gem "shoulda"
+  gem "mocha"
 end

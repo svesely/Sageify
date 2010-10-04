@@ -25,6 +25,8 @@ module LearnHelper
   def exam_link_list(page)
     if current_user.has_completed?(page.lesson)
       "<ul>#{exam_links(page.lesson).join(" \n")}</ul>"
+    else
+      ""
     end
   end
 end

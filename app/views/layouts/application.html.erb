@@ -42,8 +42,12 @@
 </div>
 
 <div id="container">
-    <p style="color: green"><%= notice %></p>
-    <p style="color: red"><%= alert %></p>
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  <% if flash[:error] %>
+    <p class="error"><%= flash[:error] %></p>
+  <% end %>
 	<div id="container-inner">
 
       <%= yield %>

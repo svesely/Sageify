@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
   belongs_to :organization
   
   validates_associated :organization, :on => :create
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
+  validates :password, :presence => true, :length => { :within => 6..20 }
+  validates :email, :presence => true, :length => {:within => 4..50 }
   
   def email_and_save
     temporary_password = random_password
