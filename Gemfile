@@ -20,3 +20,7 @@ group :development, :test do
   gem "shoulda"
   gem "mocha"
 end
+
+group :production do
+  gem "mysql"
+end
