@@ -193,3 +193,10 @@ dd {
 }
 
 
+.storyboard_panel {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  float: left;
+  border: 1px solid #999;
+}
