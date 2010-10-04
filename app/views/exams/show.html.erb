@@ -1,7 +1,8 @@
 <% html_title(@exam.name) %>
 <h1>Exam: <%= @exam.name %></h1>
-
-<%= "<h3>There are no questions for this exam</h3>" if @exam.questions.empty? %>
+<% if @exam.questions.empty? -%>
+  <h3>There are no questions for this exam</h3>
+<% end -%>
 <ul class="questions">
   <%= render :partial => "question", :collection => @exam.questions %>
   <li><%= link_to 'Add a question', new_exam_question_path(@exam) %></li>
