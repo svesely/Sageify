@@ -34,7 +34,7 @@ Feature: Assigning users to a lesson
     Given I am a logged in ID with a lesson and assigned user ready
     When I follow "Assign users"
     Then I should see "John Dorian"
-    When I press "Delete Assignment"
+    When I press "Delete assignment"
     Then I should see "User successfully unassigned"
     And I should not see "John Dorian"
   
