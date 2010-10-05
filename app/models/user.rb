@@ -72,7 +72,9 @@ class User < ActiveRecord::Base
   
   def complete(lesson)
     raise ArgumentError unless lesson.is_a? Lesson
-    self.completed_lessons << lesson
+    completion = self.completions.new
+    completion.lesson = lesson
+    completion.save!
     self.unassign lesson
     self.save
   end
