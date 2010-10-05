@@ -15,7 +15,7 @@ Given /^an exam with questions$/ do
   Given "an organization exists"
   exam = Factory.create(:exam, :name => "Big exam", :organization => @organization)
   (1..3).each do |n|
-    question = Factory.build(:question, :text => "Question #{n}")
+    question = exam.questions.build(:text => "Question #{n}")
     question.choices.build( attributes = {:letter => "a", :text => "An answer"})
     question.choices.build( attributes = {:letter => "b", :text => "Correct answer"})
     question.choices.build( attributes = {:letter => "c", :text => "Another answer"})

@@ -75,6 +75,7 @@ GEM
     mime-types (1.16)
     mocha (0.9.8)
       rake
+    mysql (2.8.1)
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -125,6 +126,7 @@ DEPENDENCIES
   factory_girl
   jrails
   mocha
+  mysql
   nokogiri
   rails (= 3.0.0)
   shoulda

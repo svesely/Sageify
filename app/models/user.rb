@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   validates :last_name, :presence => true
   validates :password, :presence => true, :length => { :within => 6..20 }
   validates :email, :presence => true, :length => {:within => 4..50 }
+
+  attr_accessible :first_name, :last_name
   
   def email_and_save
     temporary_password = random_password
@@ -62,7 +64,9 @@ class User < ActiveRecord::Base
   def assign(lesson)
     raise ArgumentError unless lesson.is_a? Lesson
     return false if self.is_assigned?(lesson)
-    self.assigned_lessons << lesson
+    assignment = self.assignments.new
+    assignment.lesson = lesson
+    assignment.save
     UserMailer.lesson_assigned_email(self, lesson).deliver
   end
   

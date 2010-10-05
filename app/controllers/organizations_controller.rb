@@ -17,6 +17,9 @@ class OrganizationsController < ApplicationController
     begin
       ActiveRecord::Base.transaction do
         @organization.save!
+        @user.email = params[:user][:email]
+        @user.password = params[:user][:password]
+        @user.password_confirmation = params[:user][:password_confirmation]
         @user.organization = @organization
         @user.save!
         @user.has_role! "Manager"

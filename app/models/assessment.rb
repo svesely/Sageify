@@ -3,6 +3,8 @@ class Assessment < ActiveRecord::Base
   belongs_to :organization
   has_many :answers
   belongs_to :learner, :class_name => "User", :foreign_key => "learner_id"
+
+  attr_protected :exam_id, :organization_id, :learner_id
   
   def pass?
     unformatted_score >= exam.pass_requirement
@@ -62,15 +64,23 @@ class Assessment < ActiveRecord::Base
   private
   
   def create_answers_from_hash(answer_hash)
-    answer_hash.each do |answer|
-      answers << Answer.create(:question => Question.find(answer[0]), :value => answer[1])
+    self.save!
+    answer_hash.each do |answer_array|
+      answer = self.answers.new
+      answer.question = self.exam.questions.find(answer_array[0])
+      answer.value = answer_array[1]
+      answer.save!
     end
     answers
   end
   
   def create_answers_from_array(answer_array)
+    self.save!
     self.exam.questions.each_with_index do |question, index|
-      answers << Answer.create(:question => question, :value => answer_array[index])
+      answer = self.answers.new
+      answer.question = question
+      answer.value = answer_array[index]
+      answer.save!
     end
     answers
   end

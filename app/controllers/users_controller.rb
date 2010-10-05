@@ -17,6 +17,9 @@ class UsersController < ApplicationController
   
   def create
     @user = current_user.organization.users.new(params[:user])
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
     if @user.email_and_save
       @user.adjust_roles_for_params(params) if current_user.has_role? "Manager"
       flash[:notice] = "User Created!"

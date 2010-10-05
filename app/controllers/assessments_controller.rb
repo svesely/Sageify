@@ -11,7 +11,7 @@ class AssessmentsController < ApplicationController
   end
   
   def create
-    @exam = Exam.find(params[:assessment][:exam_id])
+    @exam = current_user.organization.exams.find(params[:assessment][:exam_id])
     @assessment = Assessment.new(:learner => current_user, :exam => @exam)
     @assessment.organization = current_user.organization
     @assessment.questions = params[:questions]
