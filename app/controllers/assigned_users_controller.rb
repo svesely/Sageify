@@ -1,5 +1,12 @@
 class AssignedUsersController < ApplicationController
   
+  before_filter :check_access_control
+
+  access_control :allow_access?, :filter => false do
+    allow "Managers"
+    allow "Instructional Designers"
+  end
+
   before_filter :find_lesson
   
   def index
