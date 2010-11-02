@@ -35,6 +35,6 @@ class AssignedUsersController < ApplicationController
   private 
   
   def find_lesson
-    @lesson = Lesson.find(params[:lesson_id], :include => :assigned_users)
+    @lesson = current_user.organization.lessons.find(params[:lesson_id], :include => :assigned_users)
   end
 end
