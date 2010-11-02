@@ -14,6 +14,8 @@ class Lesson < ActiveRecord::Base
   before_save :sanitize_name
   
   validates_presence_of :name
+
+  attr_accessible :name, :public, :position, :description
   
   def sanitize_name
     self.name = ActionController::Base.helpers.strip_tags(self.name)

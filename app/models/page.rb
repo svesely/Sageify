@@ -9,6 +9,8 @@ class Page < ActiveRecord::Base
   validates_presence_of :title
   
   after_create :move_to_bottom
+
+  attr_accessible :title, :content, :position
   
   def sanitize_title
     self.title = ActionController::Base.helpers.strip_tags(self.title)

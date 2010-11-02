@@ -51,6 +51,7 @@ class QuestionsController < ApplicationController
   def create
     @exam = current_user.organization.exams.find(params['exam_id'])
     @question = @exam.questions.new(params[:question])
+    @question.correct_choice_letter = params[:question][:correct_choice_letter]
     redirect_to(@question.questionable)  and return if params['cancel']
     respond_to do |format|
       if @question.save

@@ -15,6 +15,8 @@ class Question < ActiveRecord::Base
   validates_presence_of :text, :message => "can't be blank"
   validates_presence_of :correct_choice, :on => :create, :message => "You must select a correct choice"
   validates_associated :correct_choice, :on => :create
+
+  attr_accessible :text, :position, :active, :correct_choice_letter, :choices_attributes
   
   def calculated_range(range)
     if range.nil?

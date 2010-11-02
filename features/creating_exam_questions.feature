@@ -27,7 +27,8 @@ Feature: Creating questions
     And I fill in "question_choices_attributes_1_text" with "Correct Answer"
     And I fill in "question_choices_attributes_2_text" with "Another incorrect answer"
     And I press "save_and_done"
-    Then I should see "Question was successfully created"
+    Then I should not see "You must select a correct choice"
+    And I should see "Question was successfully created"
     And I should see "This is a new question"
     And I should see "(Correct) Correct Answer"
     

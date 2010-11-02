@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,7 +16,7 @@ gem "nokogiri"
 group :development, :test do
   gem 'cucumber-rails'
   gem "factory_girl"
-  gem 'capybara'
+  gem 'capybara', '0.3.9'
   gem "shoulda"
   gem "mocha"
 end
