@@ -1,6 +1,6 @@
-if [[ -n "$rvm_environments_path" && -s "$rvm_environments_path/ruby-1.9.2-p0@sageify" ]] ; then
-  . "$rvm_environments_path/ruby-1.9.2-p0@sageify"
+if [[ -n "$rvm_environments_path" && -s "$rvm_environments_path/ruby-1.9.2@sageify" ]] ; then
+  . "$rvm_environments_path/ruby-1.9.2@sageify"
 else
-  rvm --create use  "ruby-1.9.2-p0@sageify"
+  rvm --create use  "ruby-1.9.2@sageify"
 fi
 
